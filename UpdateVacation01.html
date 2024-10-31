@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!-- Kgoputsho John Kgalema-24917916 -->
+<!-- Sibongokuhle Mateza-24848299 -->
+<!-- Millicent Kaila-25002024 -->
+<!-- Mokete Bapela-24861449 -->
+<!-- Kamogelo Koko-24875555 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Tab Webpage</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 5px 5px 0 0;
+            background: #eee;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .tab:hover {
+            background: #ddd;
+        }
+
+        .tab.active {
+            background: #fff;
+            border-bottom: 2px solid #007BFF;
+            color: #007BFF;
+        }
+
+    
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 0 5px 5px 5px;
+            background: #fff;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        /* Table styling */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 1em;
+            color: #333;
+        }
+
+        caption {
+            font-size: 1.4em;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #555;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7f9fa;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        
+        section iframe {
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        
+        <style>
+    /* Base tab styling */
+    .tab {
+        padding: 15px 25px;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 5px 5px 0 0;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        color: #fff;
+    }
+
+    /* Specific colors for each tab */
+    .tab:nth-child(1) { background-color: #red; } /* Durban - orange */
+    .tab:nth-child(2) { background-color: #33A1FF; } /* Mpumalanga - blue */
+    .tab:nth-child(3) { background-color: #8D33FF; } /* Suncity - purple */
+    .tab:nth-child(4) { background-color: #33FF57; } /* Cape-Town - green */
+    .tab:nth-child(5) { background-color: #FFD133; } /* Johannesburg - yellow */
+
+    /* Hover effects */
+    .tab:hover {
+        opacity: 0.85;
+    }
+
+    /* Active tab styling */
+    .tab.active {
+        border-bottom: 2px solid #007BFF;
+        color: #333;
+    }
+</style>
+
+
+</head>
+<body>
+
+    <h1>Destinations</h1>
+    
+    <div class="tab-container">
+        <div class="tab active" onclick="openTab(event, 'Durban')">Durban</div>
+        <div class="tab" onclick="openTab(event, 'Mpumalanga')">Mpumalanga</div>
+        <div class="tab" onclick="openTab(event, 'Suncity')">Suncity</div>
+        <div class="tab" onclick="openTab(event, 'Cape-Town')">Cape-Town</div>
+        <div class="tab" onclick="openTab(event, 'Johannesburg')">Johannesburg</div>
+        <div class="tab" onclick="openTab(event, 'Contact Us')">Contact Us</div>
+    </div>
+    
+    <div id="Durban" class="content active">
+        <h2>About Durban as a popular tourist site</h2>
+        <p>
+            Durban is a beautiful city located on the East Coast of South Africa that offers marvelous scenic views and a wide variety of tourist attractions.
+        </p>
+        <h3>(a) Ushaka Marine World</h3>
+        <p>Ushaka Marine World is a gorgeous and adventurous theme park located in Durban.</p>
+        
+        <table>
+            <caption>Activities and Prices</caption>
+            <thead>
+                <tr>
+                    <th>Attraction</th>
+                    <th>Activities</th>
+                    <th>Prices</th>
+                    <th>Official Links</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ushaka Sea World</td>
+                    <td>
+                        <ol>
+                            <li>View sea animals</li>
+                            <li>Watch dolphin and seal shows</li>
+                        </ol>
+                    </td>
+                    
+                    <td>
+                        <ol>
+                            <li>Adults= R202</li>
+                            <li>Children & Seniors= R154</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://ushakamarine.com/" target="_blank">the official website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>Ushaka Wet 'n Wild</td>
+                    <td>
+                        <ol>
+                            <li>Swimming</li>
+                            <li>Water sliding</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R192</li>
+                            <li>Children & Seniors= R156</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://ushakamarine.com/" target="_blank">the official website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>Chimp and Zee Rope Adventure Park</td>
+                    <td>
+                        <ol>
+                            <li>Rope climbing</li>
+                            <li>Zip line gliding</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R195</li>
+                            <li>Children & Seniors= R195</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://ushakamarine.com/" target="_blank">the official website</a> for more information.</p>
+    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>Well, you are not the adventurous type? No problem, Durban has numerous leisure tourist hotels you can book around Ushaka Marine which are:</p>
+        <h3>(b) All Seasons Luxury Guest House</h3>
+        <ul>
+            <li>5.0 km from uShaka Marine World</li>
+            <li>Offers 4 suites from R950-R1380/night with breakfast included.</li>
+            <li>Attractions: UShaka Marine World, Galleria Shopping mall, and Lords & Legends restaurant</li>
+        </ul>
+        
+        <h3>(c) La Loggia Bed & Breakfast</h3>
+        <ul>
+            <li>17.4 km from uShaka Marine World</li>
+            <li>Price ranges from R1100-R1350/night with breakfast included.</li>
+            <li>Includes activities like rock climbing, waterslides, horse-riding, skydiving, and dolphin viewing.</li>
+        </ul>
+        
+        <section id="Our Durban Video">
+            <h2>Our Durban Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qx7QGvzsDv8?si=7MmpZ286TMFURVY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </div>
+    
+    <!-- Added Tab 2 content -->
+    <div id="Suncity" class="content">
+        <h2>Suncity Resort</h2>
+        <p>Sun City Resort is South Africa’s ultimate playground! Nestled in the Pilanesberg, this luxurious oasis boasts world-class casinos, top-rated golf courses, thrilling safari experiences, and a water wonderland at Valley of Waves. Whether you’re seeking relaxation, adventure, or family fun, Sun City offers something unforgettable for everyone—all just a stone’s throw from Johannesburg. Come for the excitement; stay for the memories!
+</p>
+        <br>
+        <table>
+            <caption>Activities and Prices</caption>
+            <thead>
+                <tr>
+                    <th>Attraction</th>
+                    <th>Activities</th>
+                    <th>Prices</th>
+                    <th>Official Links</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Valley of Waves Sun City water park.</td>
+                    <td>
+                        <ol>
+                            <li>Swimming</li>
+                            <li>Water-boarding</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R395pp</li>
+                            <li>Children & Seniors= R290pp</li>
+                        </ol>
+                        
+                    </td>
+                    <td><p>Visit <a href=https://www.suninternational.com/sun-city/ target="_blank">the official website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>Lost City Golf Course</td>
+                    <td>
+                        <ol>
+                            <li>Golfing </li>
+                            <li>Site-Sering</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Hotel Resident (18 holes)= R380pp</li>
+                            <li>18 Holes Individual (Visitor)= R1300pp</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href=https://www.suninternational.com/sun-city/ target="_blank">the official website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>The Maze of the Lost City</td>
+                    <td>
+                        <ol>
+                            <li>Maze Navigation</li>
+                            <li>Site-Seeing</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= FREE</li>
+                            <li>Children & Seniors= FREE</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href=https://www.suninternational.com/sun-city/ target="_blank">the official website</a> for more information.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="Sun-City Video">
+            <h2>Our Sun-City Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R0B-9uIw9bg?si=zYXIbB44wgC8HS60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        
+        
+        
+    
+    </div>
+    
+    <div id="Mpumalanga" class="content">
+        <h2>Mpumalanga</h2>
+        <p>Mpumalanga, often called "The Place of the Rising Sun," is a stunning tourist destination in northeastern South Africa, renowned for its lush landscapes and diverse wildlife. Key attractions include the Panorama Route, a scenic drive offering breathtaking viewpoints like God's Window, Blyde River Canyon (one of the largest canyons in the world), and Lisbon Falls. The area is also home to Kruger National Park, one of Africa’s largest game reserves, where visitors can experience the Big Five (lion, leopard, rhino, elephant, and buffalo) in their natural habitat. For adventure seekers, Mpumalanga offers hiking, rock climbing, and river rafting, making it an unforgettable destination for nature enthusiasts.</p>
+        <br>
+        <h3>(a) Mpumalanga's Attractions </h3>
+        <p>Mpumalanga has a wide variety of attractions you can visit for some leisure and adrenalin based activities priced affordably:</p>
+        
+        <table>
+            <caption>Activities and Prices</caption>
+            <thead>
+                <tr>
+                    <th>Attraction</th>
+                    <th>Activities</th>
+                    <th>Prices</th>
+                    <th>Official Sites</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Blyde River Canyon</td>
+                    <td>
+                        <ol>
+                            <li>Hiking around the hiking area Lydenburg</li>
+                            <li>Site seeing around God's window</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R250</li>
+                            <li>Children & Seniors= R140</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href=https://www.nature-reserve.co.za/blyde-river-canyon-natural-preserve.html target="_blank">the official website</a> for more information.</td>
+                </tr>
+                <tr>
+                    <td>Graskop Gorge Lift</td>
+                    <td>
+                        <ol>
+                            <li>Zip-lining</li>
+                            <li>Forest walks</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R65</li>
+                            <li>Seniors= R65</li>
+                            <li>Children from the agas of 4-16= R35</li>
+                            <li>Children from ages 0-3= FREE</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href=https://www.graskopgorgeliftcompany.co.za/ target="_blank">the official website</a> for more information.</td>
+                </tr>
+                <tr>
+                    <td>The Three Rondavels</td>
+                    <td>
+                        <ol>
+                            <li>Site-Seeing </li>
+                            <li>Hiking and Exploring the area</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R20</li>
+                            <li>Children & Seniors= R20</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href=https://www.sa-venues.com/attractionsmpl/three-rondavels.htm target="_blank">the official website</a> for more information.</td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="Our Mpumalanga Video">
+            <h2>Our Mpumalanga Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZiXm9hGhfqs?si=nyBjZ5RRa_uySyaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        
+    </div>
+    
+    <div id="Cape-Town" class="content">
+        <h2>Cape-Town</h2>
+        <p>Cape Town is a city that dazzles with natural beauty, vibrant culture, and endless adventures! Nestled between the iconic Table Mountain and the sparkling Atlantic Ocean, Cape Town offers a mix of stunning landscapes, rich history, and world-class experiences. Start your journey by taking a cable car to the top of Table Mountain for panoramic views, then explore the lush Kirstenbosch Botanical Gardens or enjoy a picnic at the top of Signal Hill as the sun sets over the city.<br><br>
+
+The beaches are as diverse as the city itself, from the trendy Camps Bay to the charming Boulders Beach, where you can swim alongside African penguins. For wine lovers, the Cape Winelands—just a short drive away—offers exquisite wines and scenic vineyards. Cape Town’s Victoria & Alfred Waterfront is a lively hub with shopping, restaurants, and entertainment, perfect for family fun or a romantic evening by the water.<br><br>
+
+Dive into Cape Town’s rich history with a trip to Robben Island, where Nelson Mandela was imprisoned, or stroll through the colorful streets of Bo-Kaap to learn about the city’s diverse heritage. Cape Town is a playground for adventure seekers, offering everything from shark cage diving to hiking and surfing.<br><br>
+
+Warm, welcoming, and endlessly inspiring, Cape Town is more than a destination—it’s a place that will capture your heart and leave you with memories for a lifetime!</p>
+         <table>
+            <caption>Activities and Prices</caption>
+            <thead>
+                <tr>
+                    <th>Attraction</th>
+                    <th>Activities</th>
+                    <th>Prices</th>
+                    <th>Official Links</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Table-Mountain</td>
+                    <td>
+                        <ol>
+                            <li>Hiking</li>
+                            <li>Site seeing on the topof table mountain and the surrounding area.</li>
+                            <li>Cable car riding</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults (Cable-Car Rides)= R430</li>
+                            <li>Children= R250</li>
+                            <li>Seniors= R130</li>
+                        </ol>
+                    </td>
+                    <td>><p>Visit <a href="https://tablemountain.net/" target="_blank">Visit the official Website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>Big Five Game Reserve Wildlife Safari from Cape-Town</td>
+                    <td>
+                        <ol>
+                            <li>Game-Drives</li>
+                            <li>Bird-Watching</li>
+                            <li>Hiking</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li> Expect to spend from R2895 </li>
+                            
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://www.aquilasafari.com/" target="_blank">Visit the official Website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>Robben Island</td>
+                    <td>
+                        <ol>
+                            <li>Boat ride </li>
+                            <li>Site seeing</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R400</li>
+                            <li>Children= R210</li>
+                            <li>Senior Citizens= R400</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://www.robben-island.org.za/" target="_blank">Visit the official Website</a> for more information.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="Our Cape-Town Video">
+            <h2>Our Cape-Town Video
+            </h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o0AzjY8jcas?si=2d2f0Bn1uePg0huZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        
+    </div>
+    
+    <div id="Cape-Town" class="content">
+        <h2>Content for Tab 4</h2>
+        <p>This is the content for the fourth tab.</p>
+    </div>
+    
+    <div id="Johannesburg" class="content">
+        <h2>Johannesurg</h2>
+        <p>Johannesburg, South Africa’s vibrant heart, pulses with energy, culture, and rich history! Known as the “City of Gold,” Joburg offers a unique blend of urban excitement and cultural depth. Discover its past with a visit to the Apartheid Museum and Constitution Hill, where stories of resilience and freedom come to life. Explore Maboneng Precinct, a trendy neighborhood brimming with art galleries, cafes, and street markets, showcasing the city’s creative spirit.<br><br>
+
+For nature lovers, Johannesburg surprises with its leafy suburbs, sprawling parks, and the lush Johannesburg Botanical Gardens. Animal encounters are never far, with the Lion & Safari Park nearby, where you can experience South Africa’s iconic wildlife just outside the city. Shopaholics will find paradise in places like Sandton City, while food enthusiasts can savor Joburg’s world-class dining scene, offering everything from African-inspired cuisine to international flavors.<br><br>
+
+Johannesburg is more than just a city—it’s an adventure waiting to happen. Whether you’re exploring its dynamic nightlife, immersing yourself in its diverse communities, or enjoying a sunset view from Northcliff Hill, Johannesburg promises an unforgettable experience that will leave you inspired and ready for more!</p>
+        <br>
+        <table>
+            <caption>Activities and Prices</caption>
+            <thead>
+                <tr>
+                    <th>Attraction</th>
+                    <th>Activities</th>
+                    <th>Prices</th>
+                    <th>Official Sites</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pilanesburg National Park Safari</td>
+                    <td>
+                        <ol>
+                            <li>Game-Drive</li>
+                            <li>Site seeing </li>
+                            <li>Bird-Watching</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults (Game Drives and enterance for 3 hours)= R950</li>
+                            <li>Children= R950</li>
+                            <li>Seniors= R950</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwiskduOs7mJAxUZmVAGHYlOKCcYABACGgJkZw&ae=2&aspm=1&co=1&ase=2&gclid=Cj0KCQjw1Yy5BhD-ARIsAI0RbXYYuU86dlI8Gm0g_GYEhrdZFEmLUUhs_D-7f6rnBcnGG0cAC-02DLgaAoETEALw_wcB&sig=AOD64_0vFveRSOjwtlyFS3PBmibli5iCmQ&q&nis=4&adurl&ved=2ahUKEwiCrtWOs7mJAxXlUkEAHff_M5IQ0Qx6BAgOEAM" target="_blank">Visit the official Website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>Apartheid Museum</td>
+                    <td>
+                        <ol>
+                            <li>Learning South African history</li>
+                            <li>Guided tours </li>
+                            
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li> Expect to spend from R2895 </li>
+                            
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://www.apartheidmuseum.org/" target="_blank">Visit the official Website</a> for more information.</p></td>
+                </tr>
+                <tr>
+                    <td>Half day Soweto Tour</td>
+                    <td>
+                        <ol>
+                            <li>Area exploration </li>
+                            <li>Site seeing</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Adults= R1100</li>
+                            <li>Children= R1100</li>
+                            <li>Senior Citizens= R1100</li>
+                        </ol>
+                    </td>
+                    <td><p>Visit <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwig7cnntLmJAxVkqIMHHVzWEvMYABAEGgJlZg&ae=2&aspm=1&co=1&ase=2&gclid=Cj0KCQjw1Yy5BhD-ARIsAI0RbXYxybc8LaAw_DqJAl2RJT1YfvKqND_cHAiHyMLAgSrhwrfQ6oYMxKoaAk-eEALw_wcB&sig=AOD64_20ME6KUgEGt0cbO5IQv4Tq0-xw4Q&q&nis=4&adurl&ved=2ahUKEwjf_MLntLmJAxWfhv0HHWWGPewQ0Qx6BAgNEAM" target="_blank">Visit the official Website</a> for more information.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="Our Johannesburg Video">
+            <h2>Our Johannesburg Video
+            </h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tOwJlKCY3aU?si=m8tyu6WQKd0PX7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        
+    </div>
+    <div id="Contact Us" class="content">
+        <h1>Contact Details and Feedback</h1>
+        <br>
+        <h2>Feedback Form</h2>
+        <br>
+        <br>
+        
+        <form action="/submit-form" method="POST">
+        <label>
+            <p>Did you find the site helpfull?</p>
+            <input type="checkbox" name="hobbies" value="sports"> Yes
+        </label><br>
+        <label>
+            <input type="checkbox" name="hobbies" value="reading"> No
+        </label><br>
+    
+        
+        <button type="submit">Submit</button>
+    </form>
+        
+    <p>If you did not find the website helpful please contact us <a href="mailto:Kgalemakgoputshojohn@gmail.com">here</a>
+</p>
+        
+
+
+    <script>
+        function openTab(event, tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+
+<body>uu</body>
+</html>
+
